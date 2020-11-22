@@ -1,0 +1,23 @@
+#!/usr/bin/env dash
+# export update=$(checkupdates | wc -l) &
+exec ~/.config/bspwm/rules &
+export XDG_CURRENT_DESKTOP=bspwm
+export QT_QPA_PLATFORMTHEME=qt5ct
+#export SXHKD_SHELL=/usr/bin/bash
+pgrep -x sxhkd > /dev/null || sxhkd &
+bspc monitor eDP-1 -d 'web' 'code' 'chat' 'games' 'music' 'vscode' 'spotify' 'discord' 'other'
+bspc config border_width         2
+bspc config window_gap          12
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config pointer_action1 move
+bspc config pointer_action2 none
+bspc config pointer_action3 resize_corner
+bspc config click_to_focus button1
+bspc config gapless_monocle      true
+
+bspc config focused_border_color "#88c0d0"
+bspc config normal_border_color "#4c566a"
+bspc config active_border_color "#5e81ac"
+bspc config presel_feedback_color "#88c0d0"
+exec $HOME/.startup &
