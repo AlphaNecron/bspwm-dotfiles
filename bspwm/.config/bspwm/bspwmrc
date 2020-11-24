@@ -1,14 +1,11 @@
 #!/usr/bin/env dash
-# export update=$(checkupdates | wc -l) &
 exec ~/.config/bspwm/rules &
-export XDG_CURRENT_DESKTOP=bspwm
 export QT_QPA_PLATFORMTHEME=qt5ct
-#export SXHKD_SHELL=/usr/bin/bash
 pgrep -x sxhkd > /dev/null || sxhkd &
 bspc monitor eDP-1 -d 'web' 'code' 'chat' 'games' 'music' 'vscode' 'spotify' 'discord' 'other'
 bspc config border_width         2
 bspc config window_gap          12
-bspc config split_ratio          0.5
+bspc config split_ratio          0.6
 bspc config borderless_monocle   true
 bspc config pointer_action1 move
 bspc config pointer_action2 none

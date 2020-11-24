@@ -1,15 +1,12 @@
-#!/usr/bin/env dash
-#wmname "$@" &
+#!/bin/sh
 nitrogen --restore &
-# ibus-daemon -d -r &
 dunst &
 picom &
-#picom --backend=xrender --experimental-backends --conf /dev/null &
 pgrep -x "urxvtd" > /dev/null || urxvtd -q -o -f &
 mpd ~/.config/mpd/mpd.conf &
 nm-applet &
 xsetroot -cursor_name left_ptr &
 # powerkit &
 pgrep -x udiskie > /dev/null || udiskie -s -a -q --terminal termite -f thunar &
-/home/$USER/.local/bin/start-poly &
+$HOME/.local/bin/start-poly &
 wait && notify-send -u normal -c system -i ~/Pictures/arch.png "Arch has booted successfully", "Took $(systemd-analyze time | tail -1 | awk {'print $4'})\nSession: $DESKTOP_SESSION"

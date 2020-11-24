@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-xset +fp ~/.local/share/fonts
-xset +fp /usr/share/fonts/
-xset fp rehash
