@@ -15,4 +15,4 @@ bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a Screenkey manage=off
-bsp-layout set tall
+bsp-layout set tall &

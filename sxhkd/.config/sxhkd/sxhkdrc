@@ -5,32 +5,26 @@
 alt + shift + {Right,Left}
     id=$(bspc query --nodes --node); bspc node --to-desktop {next,prev}; bspc desktop --focus next; bspc node --focus ${id}
 
-#@super
-#	~/.config/polybar/scripts/launcher
-
-#alt + shift + {Right,Left}
-#    DIR={next,prev}; \
-#    bspc node -d "$DIR"; \
-#    bspc desktop -f "$DIR"
-
+# Change brightness
 XF86MonBrightness{Up,Down}
 	/home/taran/.local/bin/changeBrightness {+,-}10%
 
+#Show/hide polybar
 alt + shift + @z
 	polybar-msg cmd toggle
 
+# Open a dropdown terminal
 alt + s
   tdrop -ma -w -4 -y "$PANEL_HEIGHT" -s drop termite
 # Volume down 
 XF86Audio{LowerVolume,RaiseVolume}
-#    /home/taran/.local/bin/changeVolume unmute & \
     /home/taran/.local/bin/changeVolume 5%{-,+}
+# Mute the audio
 XF86AudioMute
     /home/taran/.local/bin/changeVolume toggle
 # terminal emulator
 super + @Return
 	urxvtc
-#	urxvt -e tmux
 super + alt + @Return
 	termite	
 super + ctrl + alt + @p
@@ -148,15 +142,12 @@ super + ctrl + {1-9}
 super + ctrl + space
 	bspc node -p cancel
 
-    #scrot '%Y-%m-%d_%H-%M-%S.png' -e 'mv $f ~/Screenshots'
 @Print
 	scrot --quality 100 ~/Screenshots/%Y-%m-%d-%T-screenshot.png -e 'xclip -selection clipboard -target image/png -i $f && notify-send -i $f "Monitor screenshot captured." "Saved as $f"'
 ctrl + @Print
-#        dunstify "Select a rectangle to capture" & \
 	scrot -sfl style=dash,width=1,color="#99ccff" --quality 100 ~/Screenshots/%Y-%m-%d-%T-rect.png -e 'xclip -selection clipboard -target image/png -i $f && notify-send -i $f "Rectangle screenshot captured." "Saved as $f"'
 alt + @Print
 	scrot -ub --quality 100 ~/Screenshots/%Y-%m-%d-%T-window.png -e 'xclip -selection clipboard -target image/png -i $f && notify-send -i $f "Window screenshot captured." "Saved as $f"'
-#	env DATE=$(date +%s) maim -i $(xdotool getactivewindow) ~/Screenshots/screenshot-$DATE.png | xclip -selection clipboard -t image/png ; notify-send -i ~/Screenshots/screenshot-$DATE.png 'Screenshot captured' "Saved as screenshot-$DATE.png"
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel

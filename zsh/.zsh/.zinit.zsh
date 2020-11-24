@@ -11,8 +11,6 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 zinit light Aloxaf/fzf-tab
 zinit load zdharma/history-search-multi-word
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-ZLE_RPROMPT_INDENT=0
 # zinit ice from"gh-r" as"program"
 # zinit load junegunn/fzf-bin
 zinit for \
@@ -49,3 +47,6 @@ zstyle ':fzf-tab:complete:nano:*' fzf-preview 'exa -1 --color=always $realpath'
 zstyle ':fzf-tab:complete:nano:*' popup-pad 30 0
 zstyle ':completion:complete:*:options' sort false
 zstyle ':fzf-tab:*' single-group color header
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+ZLE_RPROMPT_INDENT=0
+
