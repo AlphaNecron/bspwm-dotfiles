@@ -15,7 +15,7 @@ alt + shift + @z
 
 # Open a dropdown terminal
 alt + s
-  tdrop -ma -w -4 -y "$PANEL_HEIGHT" -s drop termite
+  tdrop -ma -w -4 -y "$PANEL_HEIGHT" -s dropdown termite
 # Volume down 
 XF86Audio{LowerVolume,RaiseVolume}
     /home/taran/.local/bin/changeVolume 5%{-,+}
@@ -145,7 +145,7 @@ super + ctrl + space
 @Print
 	scrot --quality 100 ~/Screenshots/%Y-%m-%d-%T-screenshot.png -e 'xclip -selection clipboard -target image/png -i $f && notify-send -i $f "Monitor screenshot captured." "Saved as $f"'
 ctrl + @Print
-	scrot -sfl style=dash,width=1,color="#99ccff" --quality 100 ~/Screenshots/%Y-%m-%d-%T-rect.png -e 'xclip -selection clipboard -target image/png -i $f && notify-send -i $f "Rectangle screenshot captured." "Saved as $f"'
+	scrot -sfl style=dash,width=1,color="#88C0D0" --quality 100 ~/Screenshots/%Y-%m-%d-%T-rect.png -e 'xclip -selection clipboard -target image/png -i $f && notify-send -i $f "Rectangle screenshot captured." "Saved as $f"'
 alt + @Print
 	scrot -ub --quality 100 ~/Screenshots/%Y-%m-%d-%T-window.png -e 'xclip -selection clipboard -target image/png -i $f && notify-send -i $f "Window screenshot captured." "Saved as $f"'
 # cancel the preselection for the focused desktop

@@ -1,12 +1,12 @@
 #!/bin/sh
-nitrogen --restore &
-dunst &
-picom &
+nitrogen --restore &> /dev/null &
+# dunst &
+picom > /dev/null &
 pgrep -x "urxvtd" > /dev/null || urxvtd -q -o -f &
-mpd ~/.config/mpd/mpd.conf &
-nm-applet &
+mpd --no-daemon ~/.config/mpd/mpd.conf &> /dev/null &
+nm-applet &> /dev/null &
 xsetroot -cursor_name left_ptr &
 # powerkit &
 pgrep -x udiskie > /dev/null || udiskie -s -a -q --terminal termite -f thunar &
-$HOME/.local/bin/start-poly &
-wait && notify-send -u normal -c system -i ~/Pictures/arch.png "Arch has booted successfully", "Took $(systemd-analyze time | tail -1 | awk {'print $4'})\nSession: $DESKTOP_SESSION"
+$HOME/.local/bin/start-poly -q &
+dunstify -u critical -a system -i ~/Pictures/arch.png "Arch has booted successfully", "Took $(systemd-analyze time | tail -1 | awk {'print $4'})\nSession: $DESKTOP_SESSION"
