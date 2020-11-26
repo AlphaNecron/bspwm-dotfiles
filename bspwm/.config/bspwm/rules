@@ -6,13 +6,13 @@ bspc rule -a Subl desktop='^2'
 bspc rule -a xdman-Main state=floating manage=on focus=on sticky=on
 bspc rule -a Code desktop='^6'
 bspc rule -a Spotify desktop='^7'
-bspc rule -a jetbrains-pycharm-ce:jetbrains-pycharm-ce desktop=code:code
+bspc rule -a jetbrains-pycharm-ce:jetbrains-pycharm-ce desktop=vscode:vscode
 bspc rule -a discord desktop='^8' manage=on focus=on state=pseudo_tiled center=true
 bspc rule -a minecraft-launcher desktop='^4' state=floating
 bspc rule -a mplayer2 state=floating
-bspc rule -a Microsoft-edge-dev desktop='^1' border=off
+bspc rule -a Termite:termite border=off
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a Screenkey manage=off
-bsp-layout set tall &
+# bsp-layout set tall

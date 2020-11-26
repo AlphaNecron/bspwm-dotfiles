@@ -10,7 +10,7 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 zinit light Aloxaf/fzf-tab
-zinit load zdharma/history-search-multi-word
+#zinit light zdharma/history-search-multi-word
 # zinit ice from"gh-r" as"program"
 # zinit load junegunn/fzf-bin
 zinit for \
