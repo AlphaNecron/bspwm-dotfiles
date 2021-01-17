@@ -1,0 +1,38 @@
+configuration {
+    modi: "run,drun,window";
+    run-shell-command: "termite -e {cmd}";
+    lines: 12;
+    width: 35;
+    columns: 1;
+    icon-theme: "Tela-dark";
+    font: "Fira Sans 13";
+    bw: 0;
+    location: 0;
+    padding: 0;
+    line-padding: 10;
+    line-margin: 0;
+    separator-style: "none";
+    fixed-num-lines: true;
+    show-icons: true;
+    combi-modi: "drun";
+    separator-style: "none";
+    hide-scrollbar: true;
+    fake-transparency: true;
+    show-icons: true;
+    display-combi: " ";
+    display-drun: " ";
+    display-window: " ";
+    display-run: " ";
+    scroll-method: 1;
+    window-format: "[{w}] {c}";
+    click-to-exit: true;
+    show-match: false;
+    color-normal: "@xbg, @xfg, @xbg, @xfg, @xbg";
+    color-urgent: "@xbg, @x1, @xbg, @x1, @xfg";
+    color-active: "@xbg, @xfg, @xbg, @xfg, @xbg";
+    color-window: "@xbg, @x1, @xfg";
+    combi-hide-mode-prefix: true;
+    drun-display-format: "{icon} {name}";
+}
+
+@import "~/.config/polybar/scripts/rofi/launcher.rasi"

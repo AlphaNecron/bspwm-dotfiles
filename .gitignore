@@ -1,2 +1,4 @@
-zsh/.zinit/plugins
-zsh/.zinit/completions
+zsh/.zinit/
+.gitignore
+.git
+scripts

@@ -10,15 +10,11 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 zinit light Aloxaf/fzf-tab
-#zinit light zdharma/history-search-multi-word
-# zinit ice from"gh-r" as"program"
-# zinit load junegunn/fzf-bin
 zinit for \
     light-mode  zsh-users/zsh-autosuggestions \
     light-mode  zdharma/fast-syntax-highlighting \
                 zdharma/history-search-multi-word
 
-setopt promptsubst
 zinit wait lucid for \
         OMZL::git.zsh \
   atload"unalias grv" \
@@ -38,15 +34,5 @@ zinit ice atclone"dircolors -b LS_COLORS > clrs.zsh" \
     atload'zstyle ":completion:*" list-colors “${(s.:.)LS_COLORS}”'
 zinit light trapd00r/LS_COLORS
 zinit ice from"gh-r" as"program"
-zstyle ":completion:*:git-checkout:*" sort false
-zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
-zstyle ':fzf-tab:complete:cd:*' popup-pad 30 0
-zstyle ':fzf-tab:complete:nano:*' fzf-preview 'exa -1 --color=always $realpath'
-zstyle ':fzf-tab:complete:nano:*' popup-pad 30 0
-zstyle ':completion:complete:*:options' sort false
-zstyle ':fzf-tab:*' single-group color header
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
-ZLE_RPROMPT_INDENT=0
+
 

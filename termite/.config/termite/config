@@ -6,8 +6,7 @@
 # License:    MIT
 
 [options]
-font = JoyPixels
-font = D2CodingBold Nerd Font Mono
+font = UbuntuMono Nerd Font Mono 11
 cursor_shape = underline
 
 [colors]
