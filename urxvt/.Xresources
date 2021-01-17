@@ -1,20 +1,21 @@
 Xft.dpi: 96
-Xft.hinting: true
+Xft.hinting: false
 Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
 Xft.antialias: true
 Xft.rgba: rgb
-URxvt.font: xft:D2Coding Nerd Font Mono:pixelsize=15px:autohint=true,xft:Iosevka Nerd Font Mono:pixelsize=15px
-URxvt.boldFont: xft:D2CodingBold Nerd Font Mono:pixelsize=15px:autohint=true,xft:Iosevka Nerd Font Mono:pixelsize=15px
+URxvt.font: xft:UbuntuMono Nerd Font Mono:pixelsize=15px:autohint=true,xft:Braille
+URxvt.boldFont: xft:UbuntuMono Nerd Font Mono:bold:pixelsize=15px:bold:autohint=true,xft:Braille
 xterm*font: xft:MesloLGS Nerd Font Mono:pixelsize=15px:autohint=true
 *.alpha: 0.75
-URxvt.depth: 32
+URxvt.depth: 24
 URxvt.highlighTextColor: #ffffff
-URxvt.background: [60]#020202
-URxvt.iconFile:   /usr/share/icons/Tela-blue/scalable/apps/utilities-x-terminal.svg
+URxvt.background: #2E3440
+URxvt.iconFile:   /usr/share/icons/Tela-dark/scalable/apps/utilities-x-terminal.svg
 Xcursor.theme: Breeze_Hacked
-#include "/home/taran/.xthemes/nord"
+#include "/home/alpha/.xthemes/nord"
 
+!URxvt.letterSpace: -1
 !URxvt.transparent : 1
 URxvt.shading : 100
 ! URxvt*fading:              30

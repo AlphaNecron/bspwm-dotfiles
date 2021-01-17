@@ -175,8 +175,8 @@
     max_icon_size = 32
 
     # Paths to default icons.    
-    icon_path = "/usr/share/icons/Papirus-Dark/32x32/actions:/usr/share/icons/Papirus-Dark/32x32/apps:/usr/share/icons/Papirus-Dark/32x32/categories:/usr/share/icons/Papirus-Dark/32x32:/usr/share/icons/Papirus-Dark/32x32/apps:/usr/share/icons/Papirus-Dark/32x32/devices:/usr/share/icons/Papirus-Dark/32x32/emblems:/usr/share/icons/Papirus-Dark/32x32/emotes:/usr/share/icons/Papirus-Dark/32x32/mimetypes:/usr/share/icons/Papirus-Dark/32x32/places:/usr/share/icons/Papirus-Dark/32x32/status"
-
+    # icon_path = "/usr/share/icons/Papirus-Dark/32x32/actions:/usr/share/icons/Papirus-Dark/32x32/apps:/usr/share/icons/Papirus-Dark/32x32/categories:/usr/share/icons/Papirus-Dark/32x32:/usr/share/icons/Papirus-Dark/32x32/apps:/usr/share/icons/Papirus-Dark/32x32/devices:/usr/share/icons/Papirus-Dark/32x32/emblems:/usr/share/icons/Papirus-Dark/32x32/emotes:/usr/share/icons/Papirus-Dark/32x32/mimetypes:/usr/share/icons/Papirus-Dark/32x32/places:/usr/share/icons/Papirus-Dark/32x32/status"
+    icon_path = "/usr/share/icons/Tela-dark/scalable/apps:/usr/share/icons/Tela-dark/scalable/devices:/usr/share/icons/Tela-dark/scalable/mimetypes:/usr/share/icons/Tela-dark/scalable/places"
 
     ### History ###
 
@@ -223,7 +223,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 2
+    corner_radius = 0
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
