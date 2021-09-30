@@ -1,37 +1,43 @@
-# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
-# Copyright (c) 2016-present Sven Greb <code@svengreb.de>
-
-# Project:    Nord Termite
-# Repository: https://github.com/arcticicestudio/nord-termite
-# License:    MIT
-
 [options]
-font = UbuntuMono Nerd Font Mono 11
+font = JetBrainsMono Nerd Font Mono 10
 cursor_shape = underline
 
 [colors]
-cursor = #d8dee9
-cursor_foreground = #2e3440
 
-foreground = #d8dee9
-foreground_bold = #d8dee9
-background = #2e3440
+# special
+foreground      = #b3b1ad
+foreground_bold = #b3b1ad
+cursor          = #b3b1ad
+background      = #0a0e14
+highlight = #273747
+# black
+color0  = #02060d
+color8  = #686868
 
-highlight = #4c566a
+# red
+color1  = #f07178
+color9  = #f07178
 
-color0  = #3b4252
-color1  = #bf616a
-color2  = #a3be8c
-color3  = #ebcb8b
-color4  = #81a1c1
-color5  = #b48ead
-color6  = #88c0d0
-color7  = #e5e9f0
-color8  = #4c566a
-color9  = #bf616a
-color10 = #a3be8c
-color11 = #ebcb8b
-color12 = #81a1c1
-color13 = #b48ead
-color14 = #8fbcbb
-color15 = #eceff4
+# green
+color2  = #c2d94c
+color10 = #c2d94c
+
+# yellow
+color3  = #ffb454
+color11 = #ffb454
+
+# blue
+color4  = #59c2ff
+color12 = #59c2ff
+
+# magenta
+color5  = #ffee99
+color13 = #ffee99
+
+# cyan
+color6  = #95e6cb
+color14 = #95e6cb
+
+# white
+color7  = #c7c7c7
+color15 = #ffffff

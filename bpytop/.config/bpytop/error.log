@@ -40,3 +40,27 @@ Traceback (most recent call last):
   File "/usr/lib/python3.9/urllib/request.py", line 1345, in do_open
     raise URLError(err)
 urllib.error.URLError: <urlopen error _ssl.c:1106: The handshake operation timed out>
+28/08/21 (20:54:46) | ERROR: Data collection thread failed with exception: integer division or modulo by zero
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 2939, in _runner
+    collector._draw()
+  File "/usr/bin/bpytop", line 3971, in _draw
+    ProcBox._draw_fg()
+  File "/usr/bin/bpytop", line 2814, in _draw_fg
+    val = ((v if v <= 100 else 100) + 100) - calc * 100 // cls.select_max
+ZeroDivisionError: integer division or modulo by zero
+28/08/21 (20:54:46) | WARNING: Exiting with errorcode (1). Runtime 0:00:02 
+
+01/09/21 (09:54:00) | ERROR: Data collection thread failed with exception: Sign not allowed in string format specifier
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 2939, in _runner
+    collector._draw()
+  File "/usr/bin/bpytop", line 3971, in _draw
+    ProcBox._draw_fg()
+  File "/usr/bin/bpytop", line 2719, in _draw_fg
+    label = (f'{THEME.title}{Fx.b}{Mv.to(y, x)}{"Pid:":>7} {"Program:" if prog_len > 8 else "Prg:":<{prog_len}}' + (f'{"Arguments:":<{arg_len-4}}' if arg_len else "") +
+ValueError: Sign not allowed in string format specifier
+01/09/21 (09:54:00) | WARNING: Exiting with errorcode (1). Runtime 0:00:02 
+
+01/09/21 (09:54:00) | WARNING: Exiting with errorcode (1). Runtime 0:00:02 
+

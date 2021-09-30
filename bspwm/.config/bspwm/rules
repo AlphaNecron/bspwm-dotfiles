@@ -1,8 +1,7 @@
-#!/usr/bin/env dash
-
+#!/usr/bin/env sh
+#bsp-layout set tall 1
 bspc rule -a xdman-Main state=floating manage=on focus=on sticky=on
 bspc rule -a Termite:termite border=off
-bspc rule -a URxvt:\* border=off
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a SimpleScreenRecorder state=floating
 bspc rule -a jetbrains-clion:\* state=floating border=off

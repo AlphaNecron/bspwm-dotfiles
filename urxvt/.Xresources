@@ -4,8 +4,8 @@ Xft.lcdfilter: lcddefault
 Xft.hintstyle: hintslight
 Xft.antialias: true
 Xft.rgba: rgb
-URxvt.font: xft:UbuntuMono Nerd Font Mono:pixelsize=15px:autohint=true,xft:Braille
-URxvt.boldFont: xft:UbuntuMono Nerd Font Mono:bold:pixelsize=15px:bold:autohint=true,xft:Braille
+URxvt.font: xft:UbuntuMono Nerd Font Mono:pixelsize=15px:autohint=true,xft:D2Coding Nerd Font Mono:pixelsize=15px,xft:Braille
+URxvt.boldFont: xft:UbuntuMono Nerd Font Mono:bold:pixelsize=15px:bold:autohint=true,xft:D2Coding Nerd Font Mono:bold:pixelsize=15px,xft:Braille
 xterm*font: xft:MesloLGS Nerd Font Mono:pixelsize=15px:autohint=true
 *.alpha: 0.75
 URxvt.depth: 24
@@ -13,14 +13,13 @@ URxvt.highlighTextColor: #ffffff
 URxvt.background: #2E3440
 URxvt.iconFile:   /usr/share/icons/Tela-dark/scalable/apps/utilities-x-terminal.svg
 Xcursor.theme: Breeze_Hacked
-#include "/home/alpha/.xthemes/nord"
 
 !URxvt.letterSpace: -1
 !URxvt.transparent : 1
 URxvt.shading : 100
 ! URxvt*fading:              30
-URxvt.internalBorder:      0
-URxvt.externalBorder:      0
+URxvt.internalBorder:      2
+URxvt.externalBorder:      2
 URxvt*hlight.rend.0: fg:0 bg:7 Regular
 URxvt.iso14755: false
 URxvt.iso14755_52: false

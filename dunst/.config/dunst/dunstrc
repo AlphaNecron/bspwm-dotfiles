@@ -292,18 +292,18 @@
 
 [urgency_low]
 timeout = 3
-background = "#3B4252"
-foreground = "#ECEFF4"
+background = "#0D1016"
+foreground = "#B3B1AD"
 
 [urgency_normal]
 timeout = 6
-background = "#3B4252"
-foreground = "#ECEFF4"
+background = "#0D1016"
+foreground = "#FFEE99"
 
 [urgency_critical]
 timeout = 0
-background = "#3B4252"
-foreground = "#ECEFF4"
+background = "#0D1016"
+foreground = "#F07178"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.

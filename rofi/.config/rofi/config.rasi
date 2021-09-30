@@ -35,4 +35,5 @@ configuration {
     drun-display-format: "{icon} {name}";
 }
 
+
 @import "~/.config/polybar/scripts/rofi/launcher.rasi"

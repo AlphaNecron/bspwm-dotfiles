@@ -6,5 +6,5 @@ paru -Scc --noconfirm
 rm --interactive=never -rf ~/.cache
 }
 function command_not_found_handler {
-echo -e "\e[1;3;31mCommand \e[1;3;33m${1}\e[1;3;31m doesn't exist."
+echo -e "\e[31mCommand \e[33m${1}\e[31m doesn't exist."
 }

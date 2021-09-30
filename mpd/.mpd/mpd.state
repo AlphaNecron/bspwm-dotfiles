@@ -3,7 +3,7 @@ audio_device_state:1:ALSA sound card
 audio_device_state:1:my fifo
 state: pause
 current: 2
-time: 0.000000
+time: 204.481000
 random: 0
 repeat: 0
 single: 1
@@ -15,4 +15,9 @@ playlist_begin
 0:Lost Sky - Where We Started (feat. Jex) [NCS Release].mp3
 1:Nightcore - We'll Meet Again (TheFatRat & Laura Brehm) - (Lyrics).opus
 2:F.O.O.L & Midranger - Neon [Monstercat EP Release].mp3
+3: Axel Johansson - The River (Lyrics Video).mp3
+4:Star Party - Legends  [NCS Release].mp3
+5:TheFatRat - Fly Away feat. Anjulie.mp3
+6:BEAUZ & Momo - Won't Look Back [NCS Release].mp3
+7:TheFatRat - Oblivion (feat. Lola Blanc).mp3
 playlist_end
