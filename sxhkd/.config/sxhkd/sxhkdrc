@@ -24,10 +24,12 @@ XF86AudioMute
     /home/alpha/.local/bin/changeVolume toggle
 # terminal emulator
 super + @Return
-	termite
+	alacritty
 # program launcher
 super + alt + @space
 	rofi -show drun
+super + alt + @Return
+	termite
 super + @space
 	rofi -show run
 super + alt + @b

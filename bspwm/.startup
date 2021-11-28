@@ -3,7 +3,7 @@ nitrogen --restore &
 picom > /dev/null &
 mpd --no-daemon &> /dev/null &
 xsetroot -cursor_name left_ptr &
-# ibus-daemon -drx &
+#ibus-daemon -drx &
 ${HOME}/.config/polybar/launch.sh &
 dunstify -t 20000 -a system -i ~/Pictures/arch-dark.png "Hello, AlphaNecron" "Boot time: $(systemd-analyze time | tail -1 | awk {'print $4'})\nSession: $DESKTOP_SESSION" &
 #dunstify -t 20000 -a system -i partition "Partition status"

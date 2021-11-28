@@ -4,7 +4,7 @@ configuration {
     lines: 12;
     width: 35;
     columns: 1;
-    icon-theme: "Tela-dark";
+    icon-theme: "Fluent dark";
     font: "Fira Sans 13";
     bw: 0;
     location: 0;
@@ -34,6 +34,5 @@ configuration {
     combi-hide-mode-prefix: true;
     drun-display-format: "{icon} {name}";
 }
-
 
 @import "~/.config/polybar/scripts/rofi/launcher.rasi"
