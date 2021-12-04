@@ -1,101 +1,76 @@
 #!/usr/bin/env bash
 
-## Author : Aditya Shakya (adi1090x)
-## Mail : adi1090x@gmail.com
-## Github : @adi1090x
-## Reddit : @adi1090x
+# Color files
+PFILE="$HOME/.config//colors.ini"
+RFILE="$HOME/.config//scripts/rofi/colors.rasi"
 
-## Dirs
-polybar_path="$HOME/.config/polybar"
-rofi_path="$HOME/.config/polybar/scripts/themes"
+# Change colors
+change_color() {
+	# polybar
+	sed -i -e "s/background = #.*/background = $BG/g" $PFILE
+	sed -i -e "s/foreground = #.*/foreground = $FG/g" $PFILE
+	sed -i -e "s/sep = #.*/sep = $SEP/g" $PFILE
+	
+	# rofi
+	cat > $RFILE <<- EOF
+	/* colors */
 
-## Dark Mode #############################################
-if  [[ $1 = "--Dark" ]]; then
+	* {
+	  al:   #00000000;
+	  bg:   ${BG}FF;
+	  bga:  ${BGA}FF;
+	  fg:   ${FG}FF;
+	  ac:   ${AC}FF;
+	  se:   ${SE}FF;
+	}
+	EOF
+	
+	polybar-msg cmd restart
+}
 
-# wallpaper ---------------------------------
-nitrogen --save --set-zoom-fill $polybar_path/wallpapers/bg_1.jpg
-
-# polybar ---------------------------------
-sed -i -e 's/bg = .*/bg = #212B30/g' $polybar_path/colors.ini
-sed -i -e 's/bg-alt = .*/bg-alt = #5C6F7B/g' $polybar_path/colors.ini
-sed -i -e 's/fg = .*/fg = #C4C7C5/g' $polybar_path/colors.ini
-sed -i -e 's/ac = .*/ac = #4DD0E1/g' $polybar_path/colors.ini
-
-sed -i -e 's/red = .*/red = #EC7875/g' $polybar_path/colors.ini
-sed -i -e 's/pink = .*/pink = #EC407A/g' $polybar_path/colors.ini
-sed -i -e 's/purple = .*/purple = #BA68C8/g' $polybar_path/colors.ini
-sed -i -e 's/blue = .*/blue = #42A5F5/g' $polybar_path/colors.ini
-sed -i -e 's/cyan = .*/cyan = #4DD0E1/g' $polybar_path/colors.ini
-sed -i -e 's/teal = .*/teal = #00B19F/g' $polybar_path/colors.ini
-sed -i -e 's/green = .*/green = #61C766/g' $polybar_path/colors.ini
-sed -i -e 's/lime = .*/lime = #B9C244/g' $polybar_path/colors.ini
-sed -i -e 's/yellow = .*/yellow = #FDD835/g' $polybar_path/colors.ini
-sed -i -e 's/amber = .*/amber = #FBC02D/g' $polybar_path/colors.ini
-sed -i -e 's/orange = .*/orange = #E57C46/g' $polybar_path/colors.ini
-sed -i -e 's/brown = .*/brown = #AC8476/g' $polybar_path/colors.ini
-sed -i -e 's/indigo = .*/indigo = #6C77BB/g' $polybar_path/colors.ini
-
-# relaunch polybar
-polybar-msg cmd restart
-
-# rofi ---------------------------------
-sed -i -e 's/background: .*/background:    #212B30ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/background-alt: .*/background-alt:    #263238ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/foreground: .*/foreground:    #C4C7C5ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/border: .*/border:    #4DD0E1ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/selected: .*/selected:    #4DD0E1ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/urgent: .*/urgent:    #EC407Aff;/g' $rofi_path/colors.rasi
-sed -i -e 's/logo: .*/logo:    #EC407Aff;/g' $rofi_path/colors.rasi
-sed -i -e 's/on: .*/on:    #61C766ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/off: .*/off:    #EC7875ff;/g' $rofi_path/colors.rasi
-
-## Light Mode #############################################
-elif  [[ $1 = "--Light" ]]; then
-
-# wallpaper ---------------------------------
-nitrogen --save --set-zoom-fill $polybar_path/wallpapers/bg_2.jpg
-
-# polybar ---------------------------------
-sed -i -e 's/bg = .*/bg = #FFFFFF/g' $polybar_path/colors.ini
-sed -i -e 's/bg-alt = .*/bg-alt = #CACACA/g' $polybar_path/colors.ini
-sed -i -e 's/fg = .*/fg = #555555/g' $polybar_path/colors.ini
-sed -i -e 's/ac = .*/ac = #4DA8B9/g' $polybar_path/colors.ini
-
-sed -i -e 's/red = .*/red = #F06A6A/g' $polybar_path/colors.ini
-sed -i -e 's/pink = .*/pink = #EC1850/g' $polybar_path/colors.ini
-sed -i -e 's/purple = .*/purple = #BA40A0/g' $polybar_path/colors.ini
-sed -i -e 's/blue = .*/blue = #427DCD/g' $polybar_path/colors.ini
-sed -i -e 's/cyan = .*/cyan = #4DA8B9/g' $polybar_path/colors.ini
-sed -i -e 's/teal = .*/teal = #008978/g' $polybar_path/colors.ini
-sed -i -e 's/green = .*/green = #5CAC30/g' $polybar_path/colors.ini
-sed -i -e 's/lime = .*/lime = #B9A41C/g' $polybar_path/colors.ini
-sed -i -e 's/yellow = .*/yellow = #D2A91D/g' $polybar_path/colors.ini
-sed -i -e 's/amber = .*/amber = #FD890F/g' $polybar_path/colors.ini
-sed -i -e 's/orange = .*/orange = #EA7222/g' $polybar_path/colors.ini
-sed -i -e 's/brown = .*/brown = #AC5C4E/g' $polybar_path/colors.ini
-sed -i -e 's/indigo = .*/indigo = #4759C6/g' $polybar_path/colors.ini
-
-# relaunch polybar
-polybar-msg cmd restart
-
-# rofi ---------------------------------
-sed -i -e 's/background: .*/background:    #ffffffff;/g' $rofi_path/colors.rasi
-sed -i -e 's/background-alt: .*/background-alt:    #e1e1e1ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/foreground: .*/foreground:    #555555ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/border: .*/border:    #4DA8B9ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/selected: .*/selected:    #4DA8B9ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/urgent: .*/urgent:    #EC1850ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/logo: .*/logo:    #EC1850ff;/g' $rofi_path/colors.rasi
-sed -i -e 's/on: .*/on:    #F06A6Aff;/g' $rofi_path/colors.rasi
-sed -i -e 's/off: .*/off:    #5CAC30ff;/g' $rofi_path/colors.rasi
-
-## Help Menu #############################################
+if  [[ $1 = "--default" ]]; then
+	BG="#212B30"
+	FG="#C4C7C5"
+	BGA="#263035"
+	SEP="#3F5360"
+	AC="#EC407A"
+	SE="#4DD0E1"
+	change_color
+elif  [[ $1 = "--nord" ]]; then
+	BG="#3B4252"
+	FG="#E5E9F0"
+	BGA="#454C5C"
+	SEP="#5B6579"
+	AC="#BF616A"
+	SE="#88C0D0"
+	change_color
+elif  [[ $1 = "--gruvbox" ]]; then
+	BG="#282828"
+	FG="#EBDBB2"
+	BGA="#313131"
+	SEP="#505050"
+	AC="#FB4934"
+	SE="#8EC07C"
+	change_color
+elif  [[ $1 = "--dark" ]]; then
+	BG="#141C21"
+	FG="#93A1A1"
+	BGA="#1E262B"
+	SEP="#3C4449"
+	AC="#D12F2C"
+	SE="#33C5BA"
+	change_color
+elif  [[ $1 = "--cherry" ]]; then
+	BG="#1F1626"
+	FG="#FFFFFF"
+	BGA="#292030"
+	SEP="#473F4E"
+	AC="#D94084"
+	SE="#4F5D95"
+	change_color
 else
-echo "
-Style Switcher
-Developed By - Aditya Shakya (@adi1090x)
-
-Available options:
---Dark	--Light
-"
+	cat <<- _EOF_
+	No option specified, Available options:
+	--default    --nord    --gruvbox    --dark    --cherry
+	_EOF_
 fi
