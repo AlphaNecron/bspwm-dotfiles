@@ -2,7 +2,7 @@ zsh/.zinit/
 .git/
 scripts/
 btop/.config/btop/themes
-mpd/.mpd/mpd/mpd.db
-mpd/.mpd/mpd/mpd.state
-mpd/.mpd/mpd/playlists/
+mpd/.mpd/mpd.db
+mpd/.mpd/mpd.state
+mpd/.mpd/playlists/
 **/*.log
