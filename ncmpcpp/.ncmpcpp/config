@@ -1,7 +1,7 @@
 [header]
 header_visibility = "no"
 header_window_color = "default"
-volume_color = "green"
+volume_color = "yellow"
 state_line_color = "9"
 
 [playlist]
@@ -16,7 +16,7 @@ browser_playlist_prefix = "$1»$1 "
 progressbar_look = "━━━"
 progressbar_color = "9"
 statusbar_visibility = "yes"
-progressbar_elapsed_color = "cyan"
+progressbar_elapsed_color = "yellow"
 statusbar_color = "3"
 song_status_format = "{%t - %a}"
 
@@ -36,4 +36,5 @@ visualizer_output_name = "my_fifo"
 visualizer_sync_interval = "30" 
 visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
+visualizer_color = "yellow"
 visualizer_look = "▋▋"
