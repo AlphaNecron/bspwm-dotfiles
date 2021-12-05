@@ -14,8 +14,6 @@ alt + shift + @z
 	polybar-msg cmd toggle
 
 # Open a dropdown terminal
-alt + s
-  tdrop -ma -w -4 -y "$PANEL_HEIGHT" -s dropdown termite
 # Volume down 
 XF86Audio{LowerVolume,RaiseVolume}
     /home/alpha/.local/bin/changeVolume 5%{-,+}
@@ -24,12 +22,12 @@ XF86AudioMute
     /home/alpha/.local/bin/changeVolume toggle
 # terminal emulator
 super + @Return
+	termite
+super + alt + @Return
 	alacritty
 # program launcher
 super + alt + @space
 	rofi -show drun
-super + alt + @Return
-	termite
 super + @space
 	rofi -show run
 super + alt + @b
